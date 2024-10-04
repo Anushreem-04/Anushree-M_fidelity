@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Feedback Rating Chart</title>
+    <style>
+        /* CSS Styles */
+        h1 {
+            text-align: center; /* Center the main heading */
+            color: #FF00FF; /* Magenta color */
+            font-style: italic; /* Italic style */
+        }
+        table {
+            margin-left: 35%; /* Align table to the left */
+            background-color: #F0F0F0; /* Light gray background */
+            border-collapse: collapse; /* Collapse borders */
+        }
+        td {
+            text-align: left; /* Left align text in cells */
+            padding: 10px; /* Add padding for better spacing */
+        }
+        caption {
+            font-weight: bold; /* Bold caption text */
+        }
+        .tri {
+            background-color: #ff0080; /* Light pink for "tri" class */
+        }
+        .theader {
+            background-color: #800000; /* Dark red for header */
+            color: white; /* White text color for header */
+        }
+        #exl, #vg1 {
+            background-color: #00ff00; /* Green for excellent and very good ratings */
+        }
+        #gol {
+            background-color: #fff000; /* Yellow for good rating */
+        }
+        #avl {
+            background-color: #d3d3d3; /* Light gray for average rating */
+            color: #ffffff; /* White text for average rating */
+        }
+        #bal {
+            background-color: #ff0000; /* Red for below average rating */
+            color: #ffffff; /* White text for below average rating */
+        }
+    </style>
+</head>
+<body>
+    <h1>Trainer's Feedback Rating Chart</h1>
+    <p>Trainer's Name: Elite Parker</p>
+    <table border="1">
+        <caption>Feedback Ratings</caption>
+        <thead class="theader">
+            <tr>
+                <th>S.No.</th>
+                <th>Training Module Name</th>
+                <th>Overall Rating</th>
+                <th>Feedback</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tri">1</td>
+                <td>HTML5, CSS3, JavaScript</td>
+                <td id="exl">5</td>
+                <td>Excellent</td>
+            </tr>
+            <tr>
+                <td class="tri">2</td>
+                <td>Basic Java Programming</td>
+                <td id="vg1">4</td>
+                <td>Very Good</td>
+            </tr>
+            <tr>
+                <td class="tri">3</td>
+                <td>Advanced Java Programming</td>
+                <td id="gol">3</td>
+                <td>Good</td>
+            </tr>
+            <tr>
+                <td class="tri">4</td>
+                <td>UNIX Shell Scripting</td>
+                <td id="avl">2</td>
+                <td>Average</td>
+            </tr>
+            <tr>
+                <td class="tri">5</td>
+                <td>Python Programming</td>
+                <td id="bal">1</td>
+                <td>Below Average</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

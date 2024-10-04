@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Material Styling</title>
+    <style>
+        /* CSS Selectors */
+        body {
+            background-color: #00FFFF; /* Light Cyan Background */
+            font-family: "Arial";
+            font-size: 12px; /* Base font size */
+        }
+        
+        h1 {
+            font-size: 2.5em; /* Heading font size */
+        }
+
+        h2 {
+            font-size: 1.5em; /* Subheading font size */
+        }
+
+        dd {
+            color: #FF0000; /* Red color */
+            font-size: 1.7em; /* Description font size */
+        }
+
+        p[title] {
+            line-height: 1.5; /* Line height for paragraphs with a title attribute */
+        }
+
+        .reasons {
+            color: #FF0F70; /* Pink color for reasons */
+            font-weight: bold; /* Bold font */
+            line-height: 1.5; /* Line height */
+            font-size: 1.5em; /* Font size */
+            font-style: italic; /* Italic style */
+        }
+
+        .description01 {
+            color: #F500FF; /* Magenta color */
+            font-style: italic; /* Italic style */
+        }
+
+        .description07 {
+            font-weight: bold; /* Bold font */
+            color: #FF0000; /* Red color */
+        }
+
+        em {
+            font-style: italic; /* Italic for emphasis */
+        }
+    </style>
+</head>
+<body>
+    <h1>Why to Learn Java Programming?</h1>
+    <p>
+        Java is a MUST for students and working professionals to become a great Software Engineer,
+        especially when they are working in the Software Development Domain. I will list down some of the likely advantages of learning Java Programming.
+    </p>
+    
+    <h2>Advantages of Learning Java</h2>
+    <dl>
+        <dt>Object Oriented</dt>
+        <dd>Java is designed to let you understand the best concept of OOP.</dd>
+        
+        <dt>Platform Independent</dt>
+        <dd>
+            Unlike many other programming languages, Java compiles not into specific machine code,
+            rather into platform-independent bytecode. This bytecode is distributed over the web
+            and interpreted by the Virtual Machine on whichever platform it is being run.
+        </dd>
+        
+        <dt>Security</dt>
+        <dd class="reasons">Java's secure features enable you to develop virus-free, tamper-free systems.</dd>
+        
+        <dt>Architecture-Neutral</dt>
+        <dd>
+            Java compiler generates an architecture-neutral object file format,
+            which makes the compiled code executable on many processors with the presence of a runtime system.
+        </dd>
+
+        <dt>Portable</dt>
+        <dd>
+            Being architecture-neutral and having no implementation-dependent aspects of the specification makes Java portable.
+            Complete ANSI C clean portability boundary includes the POSIX standard.
+        </dd>
+
+        <dt>Robust</dt>
+        <dd class="description01">Java makes it easy to eliminate error-prone situations by emphasizing mainly on compile-time error checking and runtime checking.</dd>
+    </dl>
+</body>
+</html>
