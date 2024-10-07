@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AC Maintenance Service</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        label {
+            float: left;
+            width: 40%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 55%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .form-group {
+            overflow: hidden;
+            clear: both;
+        }
+        .radio-group {
+            width: 55%;
+            padding: 8px;
+            display: inline-block;
+        }
+        .radio-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+        .button-group {
+            text-align: right;
+        }
+        #message {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #007bff;
+            background-color: #e9f5ff;
+            border-radius: 5px;
+            display: none;
+        }
+</style>
+</head>
+<body>
+ 
+    <h1>AC Maintenance Service</h1>
+<form id="acServiceForm" onsubmit="showMessage(event)">
+<div class="form-group">
+<label for="customerName">Customer Name:</label>
+<input type="text" id="customerName" name="customerName" placeholder="Enter your name" required>
+</div>
+ 
+        <div class="form-group">
+<label>Gender:</label>
+<div class="radio-group">
+<input type="radio" id="male" name="gender" value="Male" required>
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="Female" required>
+<label for="female">Female</label>
+</div>
+</div>
+ 
+        <div class="form-group">
+<label for="mobileNumber">Mobile Number:</label>
+<input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter your mobile number" 
+               pattern="^[789]\d{9}$" required>
+</div>
+ 
+        <div class="form-group">
+<label for="email">Email ID:</label>
+<input type="email" id="email" name="email" placeholder="Enter your email Id" required>
+</div>
+ 
+        <div class="form-group">
+<label for="address">Address:</label>
+<textarea id="address" name="address" placeholder="Enter your address" rows="5" cols="25" required></textarea>
+</div>
+ 
+        <div class="form-group">
+<label for="acType">AC Type:</label>
+<input list="acTypes" id="acType" name="acType" placeholder="Select AC Type" required>
+<datalist id="acTypes">
+<option value="Split">
+<option value="Window">
+<option value="Centralized">
+<option value="Portable">
+</datalist>
+</div>
+ 
+        <div class="form-group">
+<label for="serviceType">Service Type:</label>
+<select id="serviceType" name="serviceType" required>
+<option value="Cleaning">Cleaning</option>
+<option value="Repair">Repair</option>
+<option value="Gas Refill">Gas Refill</option>
+</select>
+</div>
+ 
+        <div class="form-group">
+<label for="dateForAppointment">Date for Appointment:</label>
+<input type="date" id="dateForAppointment" name="dateForAppointment" required>
+</div>
+ 
+        <div class="form-group">
+<label for="yearlyMaintenance">Yearly Maintenance:</label>
+<input type="checkbox" id="yearlyMaintenance" name="yearlyMaintenance" value="Yes">
+<label for="yearlyMaintenance">Select if required</label>
+</div>
+ 
+        <div class="form-group">
+<label for="duration">Duration in Months from Previous Service:</label>
+<input type="range" id="duration" name="duration" min="0" max="6" step="1" title="0 to 6 Months" required>
+</div>
+ 
+        <div class="form-group button-group">
+<input type="submit" value="Submit">
+<input type="reset" value="Clear">
+</div>
+</form>
+ 
+    <div id="message">
+<p id="messageText"></p>
+</div>
+ 
+    <script>
+        function showMessage(event) {
+            event.preventDefault();  // Prevents the form from submitting in the traditional way
+ 
+            // Get form values
+            const name = document.getElementById("customerName").value;
+            const acType = document.getElementById("acType").value;
+            const serviceType = document.getElementById("serviceType").value;
+            const email = document.getElementById("email").value;
+            const yearlyMaintenance = document.getElementById("yearlyMaintenance").checked ? " with yearly maintenance" : "";
+ 
+            // Set message text
+            const message = `Hello ${name}, your service appointment for ${acType} AC ${serviceType}${yearlyMaintenance} will be sent to your email ID ${email} and the estimated service charge will be Rs 2500.`;
+ 
+            // Display the message
+            document.getElementById("messageText").textContent = message;
+            document.getElementById("message").style.display = "block";
+        }
+</script>
+ 
+</body>
+</html>
+ 
