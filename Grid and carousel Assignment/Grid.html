@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HUNG</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .about, .shopping {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <main>
+        <section class="about">
+            <h2>HUNG</h2>
+            <!-- Image for HUNG Section -->
+            <img src="C:\Users\Administrator\Downloads\Documents\shop.jpg" alt="HUNG Company">
+            <p>Welcome to HUNG, your ultimate destination for all your shopping needs. Our mission is to provide high-quality products at unbeatable prices, ensuring you have a seamless shopping experience.</p>
+            <p>From the latest fashion trends to essential home goods, we have something for everyone. Join us as we redefine shopping for the modern consumer!</p>
+        </section>
+        <section class="shopping">
+            <h2>SHOPPING</h2>
+            <!-- Image for SHOPPING Section -->
+            <img src="C:\Users\Administrator\Downloads\Documents\c.jpg" alt="Shopping Experience">
+            <p>Explore our diverse range of products and enjoy exclusive deals that make shopping a delightful experience. Don't miss out on our special discounts and seasonal sales!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 HUNG. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
